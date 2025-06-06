@@ -15,6 +15,11 @@
         icon: uptime-kuma.png
         href: http://localhost:3031
         description: Service Monitoring
+        
+    - Netdata:
+        icon: netdata.png
+        href: http://localhost:19999
+        description: Real-time Performance Monitoring
 
 # Media Services
 - Media:
@@ -32,15 +37,3 @@
         icon: sonarr.png
         href: http://192.168.50.92:8989
         description: TV Show Management
-
-# AI Services
-- AI Services:
-    - Open WebUI:
-        icon: chatgpt.png
-        href: http://localhost:3032
-        description: Local AI Chat Interface
-        
-    - Ollama API:
-        icon: ollama.png
-        href: http://localhost:11434
-        description: AI Model Server
