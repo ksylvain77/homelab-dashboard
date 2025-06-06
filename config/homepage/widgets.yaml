@@ -5,7 +5,7 @@
     cpu: true
     memory: true
     disk: /
-
+    
 - datetime:
     text_size: xl
     format:
