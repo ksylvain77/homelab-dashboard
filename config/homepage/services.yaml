@@ -32,3 +32,15 @@
         icon: sonarr.png
         href: http://192.168.50.92:8989
         description: TV Show Management
+
+# AI Services
+- AI Services:
+    - Open WebUI:
+        icon: chatgpt.png
+        href: http://localhost:3032
+        description: Local AI Chat Interface
+        
+    - Ollama API:
+        icon: ollama.png
+        href: http://localhost:11434
+        description: AI Model Server
