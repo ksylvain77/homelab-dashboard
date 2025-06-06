@@ -1,0 +1,19 @@
+---
+# Network Infrastructure
+- Infrastructure:
+    - Pi-hole:
+        icon: pi-hole.png
+        href: http://192.168.50.95
+        description: DNS & Ad Blocking
+        
+    - Synology NAS:
+        icon: synology.png
+        href: http://192.168.50.92:5000
+        description: DS243+ Storage Server
+
+# Media Services
+- Media:
+    - Plex:
+        icon: plex.png
+        href: http://192.168.50.92:32400/web
+        description: Media Server

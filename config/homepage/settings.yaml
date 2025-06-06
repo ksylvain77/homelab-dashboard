@@ -1,0 +1,11 @@
+---
+title: Homelab Dashboard
+theme: dark
+color: slate
+layout:
+  Infrastructure:
+    style: row
+    columns: 4
+  Media:
+    style: row
+    columns: 4
