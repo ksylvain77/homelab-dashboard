@@ -3,13 +3,18 @@
 - Infrastructure:
     - Pi-hole:
         icon: pi-hole.png
-        href: http://192.168.50.95
+        href: http://192.168.50.5/admin
         description: DNS & Ad Blocking
         
     - Synology NAS:
         icon: synology.png
         href: http://192.168.50.92:5000
         description: DS243+ Storage Server
+        
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://localhost:3031
+        description: Service Monitoring
 
 # Media Services
 - Media:
@@ -17,3 +22,13 @@
         icon: plex.png
         href: http://192.168.50.92:32400/web
         description: Media Server
+        
+    - Radarr:
+        icon: radarr.png
+        href: http://192.168.50.92:7878
+        description: Movie Management
+        
+    - Sonarr:
+        icon: sonarr.png
+        href: http://192.168.50.92:8989
+        description: TV Show Management
