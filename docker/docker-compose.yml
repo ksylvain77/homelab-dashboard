@@ -1,56 +1,43 @@
 services:
- homepage:
-   image: ghcr.io/gethomepage/homepage:latest
-   container_name: homepage
-   ports:
-     - "3030:3000"
-   volumes:
-     - ${PWD}/../config/homepage:/app/config
-     - /var/run/docker.sock:/var/run/docker.sock
-   environment:
-     - PUID=1000
-     - PGID=1000
-     - HOMEPAGE_ALLOWED_HOSTS=localhost:3030,homepage:3030,192.168.*.*:3030
-   group_add:
-     - 986  # docker group
-   restart: unless-stopped
-   
- uptime-kuma:
-   image: louislam/uptime-kuma:1
-   container_name: uptime-kuma
-   ports:
-     - "3031:3001"
-   volumes:
-     - ${PWD}/../config/uptime-kuma:/app/data
-   restart: unless-stopped
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - "3030:3000"
+    volumes:
+      - ${PWD}/../config/homepage:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - HOMEPAGE_ALLOWED_HOSTS=localhost:3030,homepage:3030,192.168.*.*:3030
+    group_add:
+      - 986  # docker group
+    restart: unless-stopped
+    
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    ports:
+      - "3031:3001"
+    volumes:
+      - ${PWD}/../config/uptime-kuma:/app/data
+    restart: unless-stopped
 
- ollama:
-   image: ollama/ollama:rocm
-   container_name: ollama
-   ports:
-     - "11434:11434"
-   volumes:
-     - /mnt/storage/ollama/models:/root/.ollama
-   environment:
-     - OLLAMA_HOST=0.0.0.0
-     - HSA_OVERRIDE_GFX_VERSION=10.3.0  # For RX 5600/5700 compatibility
-   devices:
-     - /dev/dri
-     - /dev/kfd
-   group_add:
-     - "44"    # video group
-     - "992"   # render group
-   restart: unless-stopped
-   
- open-webui:
-   image: ghcr.io/open-webui/open-webui:main
-   container_name: open-webui
-   ports:
-     - "3032:8080"
-   volumes:
-     - /mnt/storage/ollama/open-webui:/app/backend/data
-   environment:
-     - OLLAMA_BASE_URL=http://ollama:11434
-   restart: unless-stopped
-   depends_on:
-     - ollama
+  netdata:
+    image: netdata/netdata:latest
+    container_name: netdata
+    ports:
+      - "19999:19999"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - ${PWD}/../config/netdata:/etc/netdata
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - PGID=986  # docker group
+    restart: unless-stopped
