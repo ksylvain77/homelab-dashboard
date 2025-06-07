@@ -28,6 +28,11 @@
         href: http://192.168.50.92:32400/web
         description: Media Server
         
+    - Overseerr:
+        icon: overseerr.png
+        href: http://192.168.50.92:5055
+        description: Media Requests
+        
     - Radarr:
         icon: radarr.png
         href: http://192.168.50.92:7878
@@ -37,6 +42,24 @@
         icon: sonarr.png
         href: http://192.168.50.92:8989
         description: TV Show Management
+        
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://192.168.50.92:9696
+        description: Indexer Management
+
+# Download Services
+- Downloads:
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: http://192.168.50.92:8090
+        description: Torrent Client (via VPN)
+        
+    - VaderFlix:
+        icon: mdi-movie-roll
+        href: http://192.168.50.92:8091
+        description: Custom Media App
+
 # Network Monitoring
 - Network:
     - Speedtest Tracker:
@@ -60,3 +83,20 @@
               label: Ping
               format: float
               suffix: " ms"
+
+# System Services
+- System:
+    - FlareSolverr:
+        icon: flaresolverr.png
+        href: http://192.168.50.92:8191
+        description: Cloudflare Bypass
+        
+    - Gluetun:
+        icon: mdi-vpn
+        href: http://192.168.50.92:8090
+        description: VPN Container
+        
+    - Watchtower:
+        icon: watchtower.png
+        href: #
+        description: Auto-update Containers
