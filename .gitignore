@@ -69,4 +69,4 @@ backup/
 
 # Docker volumes data (if you ever mount them locally)
 volumes/
-data/
+data/config/speedtest-tracker/
