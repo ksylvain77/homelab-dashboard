@@ -77,8 +77,8 @@
         widget:
           type: qbittorrent
           url: http://192.168.50.92:8090
-          username: YOUR_QBITTORRENT_USERNAME
-          password: YOUR_QBITTORRENT_PASSWORD
+          username: kevin
+          password: kevinkevin
         
     - VaderFlix:
         icon: mdi-movie-roll

@@ -42,3 +42,8 @@
 - 7000-7999: Media automation
 - 8000-8999: Support services
 - 9000-9999: Management tools
+
+## Related Documentation
+
+- [Widget Configuration](./widgets.md) - API keys and widget setup
+- [Network Architecture](./network.md) - Service URLs and access details
