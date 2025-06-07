@@ -1,0 +1,155 @@
+/* Vader's Mustafar Console Theme */
+
+/* Dark background with subtle lava glow */
+body {
+    background: #0a0a0a;
+    background-image: 
+      radial-gradient(ellipse at bottom, #1a0000 0%, transparent 70%),
+      radial-gradient(ellipse at top, #000000 0%, transparent 70%);
+    color: #ff6b6b;
+  }
+  
+  /* Main container styling */
+  #page_container {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Card/widget styling - Imperial console panels */
+  .card {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid #ff3333;
+    box-shadow: 
+      0 0 20px rgba(255, 51, 51, 0.5),
+      inset 0 0 20px rgba(255, 51, 51, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    border-color: #ff6666;
+    box-shadow: 
+      0 0 30px rgba(255, 102, 102, 0.8),
+      inset 0 0 30px rgba(255, 102, 102, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Headers - Imperial display style */
+  h1, h2, h3, h4, h5 {
+    color: #ff4444;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.8);
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Links and interactive elements */
+  a {
+    color: #ff6666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff9999;
+    text-shadow: 0 0 10px rgba(255, 153, 153, 0.8);
+  }
+  
+  /* Service items */
+  .service {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    border-left: 3px solid #ff3333;
+    transition: all 0.3s ease;
+  }
+  
+  .service:hover {
+    background: rgba(30, 20, 20, 0.9);
+    border-left-color: #ff6666;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+  }
+  
+  /* Status indicators - make them glow */
+  .status-indicator {
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  
+  /* Search box styling */
+  input[type="search"], input[type="text"] {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #ff3333;
+    color: #ff9999;
+    padding: 8px 12px;
+  }
+  
+  input[type="search"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6666;
+    box-shadow: 0 0 10px rgba(255, 102, 102, 0.5);
+  }
+  
+  /* Widget text */
+  .widget {
+    color: #ff8888;
+  }
+  
+  /* Stats/numbers - make them stand out */
+  .stat-value {
+    color: #ff6666;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 102, 102, 0.6);
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: #0a0a0a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ff3333;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6666;
+  }
+  
+  /* Add some atmospheric animation */
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  .card {
+    animation: flicker 5s infinite;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+  }
+  
+  /* Navigation styling */
+  nav {
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #ff3333;
+    box-shadow: 0 2px 10px rgba(255, 51, 51, 0.3);
+  }
+  
+  /* Add imperial font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+  
+  /* Override default font */
+  * {
+    font-family: 'Orbitron', monospace !important;
+  }
+  
+  /* Red alert style notifications */
+  .alert, .notification {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff3333;
+    color: #ff9999;
+  }
+  
+  /* Make the footer more Imperial */
+  footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid #ff3333;
+    color: #ff6666;
+  }

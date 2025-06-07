@@ -23,7 +23,7 @@ services:
     volumes:
       - ${PWD}/../config/uptime-kuma:/app/data
     restart: unless-stopped
-
+    
   netdata:
     image: netdata/netdata:latest
     container_name: netdata
@@ -40,4 +40,21 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - PGID=986  # docker group
+    restart: unless-stopped
+
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    ports:
+      - "3032:80"
+    volumes:
+      - ${PWD}/../config/speedtest-tracker:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - APP_KEY=base64:a9P5YUuFTgCIEJk0cZuh4GPPJ0z96UolwGvZKOW72L8=
+      - APP_URL=http://localhost:3032
+      - DB_CONNECTION=sqlite
+      - SPEEDTEST_SCHEDULE="0 * * * *"
     restart: unless-stopped

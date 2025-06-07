@@ -37,3 +37,26 @@
         icon: sonarr.png
         href: http://192.168.50.92:8989
         description: TV Show Management
+# Network Monitoring
+- Network:
+    - Speedtest Tracker:
+        icon: speedtest-tracker.png
+        href: http://localhost:3032
+        description: Internet Speed Monitoring
+        widget:
+          type: customapi
+          url: http://speedtest-tracker:80/api/speedtest/latest
+          method: GET
+          mappings:
+            - field: data.download
+              label: Download
+              format: float
+              suffix: " Mbps"
+            - field: data.upload  
+              label: Upload
+              format: float
+              suffix: " Mbps"
+            - field: data.ping
+              label: Ping
+              format: float
+              suffix: " ms"
