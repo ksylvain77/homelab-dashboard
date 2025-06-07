@@ -27,26 +27,46 @@
         icon: plex.png
         href: http://192.168.50.92:32400/web
         description: Media Server
+        widget:
+          type: plex
+          url: http://192.168.50.92:32400
+          key: QWQEjkGeKFsy3eQUYB1-
         
     - Overseerr:
         icon: overseerr.png
         href: http://192.168.50.92:5055
         description: Media Requests
+        widget:
+          type: overseerr
+          url: http://192.168.50.92:5055
+          key: MTc0NzY0ODMxOTM3NDc4NTdlYTEyLWNhN2YtNGRhYS05M2VkLTU5YzIyZWFmZDNkMQ==
         
     - Radarr:
         icon: radarr.png
         href: http://192.168.50.92:7878
         description: Movie Management
+        widget:
+          type: radarr
+          url: http://192.168.50.92:7878
+          key: 1796ecf4c4f244bfa6b7db47c6e271b0
         
     - Sonarr:
         icon: sonarr.png
         href: http://192.168.50.92:8989
         description: TV Show Management
+        widget:
+          type: sonarr
+          url: http://192.168.50.92:8989
+          key: 8709f14bd30d4924bc76349878a1a06f
         
     - Prowlarr:
         icon: prowlarr.png
         href: http://192.168.50.92:9696
         description: Indexer Management
+        widget:
+          type: prowlarr
+          url: http://192.168.50.92:9696
+          key: 06329eca76a94f1a8b43322aeff38031
 
 # Download Services
 - Downloads:
@@ -54,6 +74,11 @@
         icon: qbittorrent.png
         href: http://192.168.50.92:8090
         description: Torrent Client (via VPN)
+        widget:
+          type: qbittorrent
+          url: http://192.168.50.92:8090
+          username: YOUR_QBITTORRENT_USERNAME
+          password: YOUR_QBITTORRENT_PASSWORD
         
     - VaderFlix:
         icon: mdi-movie-roll
