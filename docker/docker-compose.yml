@@ -58,3 +58,11 @@ services:
       - DB_CONNECTION=sqlite
       - SPEEDTEST_SCHEDULE="0 * * * *"
     restart: unless-stopped
+  dashy:
+    image: lissy93/dashy
+    container_name: dashy
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${PWD}/../config/dashy/conf.yml:/app/user-data/conf.yml
+    restart: unless-stopped

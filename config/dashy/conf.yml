@@ -1,0 +1,186 @@
+pageInfo:
+  title: VadersBridge Dashboard
+  description: Home Network Control Center
+  navLinks:
+    - title: GitHub
+      path: https://github.com
+    - title: Documentation
+      path: https://dashy.to/docs
+appConfig:
+  theme: material-dark
+  layout: horizontal
+  iconSize: medium
+  language: en
+  statusCheck: true
+  statusCheckInterval: 60
+  webSearch:
+    disableWebSearch: true
+  hideComponents:
+    hideSettings: false
+    hideFooter: true
+sections:
+  - name: Media Services
+    icon: fas fa-play-circle
+    items:
+      - title: Plex
+        description: Media Server
+        icon: si-plex
+        url: http://192.168.50.92:32400/web
+        target: newtab
+        statusCheck: true
+        id: 0_1348_plex
+      - title: Overseerr
+        description: Request Management
+        icon: mdi-movie-search
+        url: http://192.168.50.92:5055
+        target: newtab
+        statusCheck: true
+        id: 1_1348_overseerr
+      - title: Radarr
+        description: Movie Management
+        icon: si-radarr
+        url: http://192.168.50.92:7878
+        target: newtab
+        statusCheck: true
+        id: 2_1348_radarr
+      - title: Sonarr
+        description: TV Management
+        icon: si-sonarr
+        url: http://192.168.50.92:8989
+        target: newtab
+        statusCheck: true
+        id: 3_1348_sonarr
+      - title: Prowlarr
+        description: Indexer Management
+        icon: mdi-cloud-search
+        url: http://192.168.50.92:9696
+        target: newtab
+        statusCheck: true
+        id: 4_1348_prowlarr
+      - title: qBittorrent
+        description: Download Client
+        icon: si-qbittorrent
+        url: http://192.168.50.92:8090
+        target: newtab
+        statusCheck: true
+        id: 5_1348_qbittorrent
+  - name: Smart Home
+    icon: fas fa-home
+    items:
+      - title: Home Assistant
+        description: Home Automation
+        icon: si-homeassistant
+        url: http://192.168.50.92:8123
+        target: newtab
+        statusCheck: true
+        id: 0_944_homeassistant
+      - title: Hue Bridge
+        description: Lighting Control
+        icon: si-philipshue
+        url: http://192.168.50.127
+        target: newtab
+        statusCheck: true
+        id: 1_944_huebridge
+  - name: Network Infrastructure
+    icon: fas fa-network-wired
+    items:
+      - title: Router Admin
+        description: ASUS RT-AX86U Pro
+        icon: si-asus
+        url: http://192.168.50.1
+        target: newtab
+        statusCheck: true
+        id: 0_2283_routeradmin
+      - title: Pi-hole
+        description: DNS Ad Blocking
+        icon: si-pihole
+        url: http://192.168.50.5/admin
+        target: newtab
+        statusCheck: true
+        id: 1_2283_pihole
+      - title: Synology NAS
+        description: DeathStar DSM
+        icon: si-synology
+        url: http://192.168.50.92:5000
+        target: newtab
+        statusCheck: true
+        id: 2_2283_synologynas
+      - title: SDRConnect Server
+        description: SDR streaming server on Raspberry Pi
+        icon: fas fa-broadcast-tower
+        url: http://192.168.50.5:50000
+        target: newtab
+        statusCheck: false
+        tags:
+          - sdr
+          - radio
+          - raspberry-pi
+        id: 3_2283_sdrconnectserver
+  - name: Monitoring
+    icon: fas fa-chart-line
+    items:
+      - title: Netdata
+        description: System Monitoring
+        icon: mdi-chart-timeline-variant
+        url: http://localhost:19999
+        target: newtab
+        statusCheck: false
+        id: 0_1062_netdata
+      - title: Speedtest Tracker
+        description: Internet Speed History
+        icon: mdi-speedometer
+        url: http://localhost:3032
+        target: newtab
+        statusCheck: false
+        id: 1_1062_speedtesttracker
+      - title: Homepage
+        description: Alternative Dashboard
+        icon: mdi-view-dashboard
+        url: http://localhost:3030
+        target: newtab
+        statusCheck: false
+        id: 2_1062_homepage
+  - name: Quick Links
+    icon: fas fa-bookmark
+    displayData:
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: VaderFlix
+        description: Custom Media Interface
+        icon: mdi-movie-filter
+        url: https://portal.vaderflix.synology.me/
+        target: newtab
+        id: 0_1054_vaderflix
+      - title: HP Printer
+        description: ENVY 4500
+        icon: fas fa-print
+        url: http://192.168.50.249
+        target: newtab
+        id: 1_1054_hpprinter
+  - name: Container Management
+    icon: fas fa-docker
+    items:
+      - title: Watchtower - Linux Box
+        description: Auto-updates Docker containers on VadersBridge
+        icon: fas fa-sync-alt
+        url: '#'
+        statusCheck: false
+        tags:
+          - docker
+          - linux
+          - monitoring
+          - auto-update
+        id: 0_1984_watchtowerlinuxbox
+      - title: Watchtower - Synology NAS
+        description: Auto-updates Docker containers on DeathStar
+        icon: fas fa-sync-alt
+        url: '#'
+        statusCheck: false
+        tags:
+          - docker
+          - synology
+          - nas
+          - monitoring
+          - auto-update
+        id: 1_1984_watchtowersynologynas
