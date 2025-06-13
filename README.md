@@ -24,6 +24,15 @@ docker-compose up -d
 
 Access your command center at `http://localhost:3030`
 
+## DEPLOYMENT TESTING
+*"The Force is what gives this dashboard its power. It surrounds us, penetrates us, and binds the galaxy together."*
+
+We are currently testing deployment configurations to ensure the dashboard operates with Imperial efficiency across different environments. This includes:
+- Container orchestration testing
+- Environment variable validation
+- Network configuration verification
+- Service discovery testing
+
 ## IMPERIAL SYSTEMS
 
 ### Surveillance & Analytics
